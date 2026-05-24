@@ -1,20 +1,36 @@
 body {
-    /* Set a gradient background from purple to teal */
     background: linear-gradient(to right, #6a3093, #a044ff, #5f2c82, #49a09d);
     font-family: Arial, sans-serif;
-    /* Sets a clean, modern font for the body text */
     color: white;
-    /* Sets the text color to white for better contrast */
     margin: 0;
-    /* Removes default margin */
     padding: 0;
-    /* Removes default padding */
-    display: flex;
-    /* Enables flexbox layout */
-    justify-content: center;
-    /* Centers content horizontally */
-    align-items: center;
-    /* Centers content vertically */
-    height: 100vh;
-    /* Makes the body take the full height of the viewport */
+    min-height: 100vh;
+}
+
+.content {
+    max-width: 760px;
+    margin: 40px auto;
+    padding: 28px;
+    background: rgba(0, 0, 0, 0.32);
+    border-radius: 18px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+}
+
+h1, h2 {
+    margin-top: 0;
+}
+
+section + section {
+    margin-top: 28px;
+}
+
+ol, ul {
+    margin: 12px 0 0 20px;
+}
+
+code {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2px 6px;
+    border-radius: 6px;
+    font-family: Consolas, Monaco, monospace;
 }
