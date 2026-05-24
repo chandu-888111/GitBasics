@@ -2,34 +2,75 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <title>Git Basics</title>
 </head>
 <body>
-    <h1>This is V3
-        1.TO UNDO git restore . or filename
-        2.after git add filename, to undo git restore --staged filename then git restore filename
-        3.after git add and made changes but not committed git restore --worktree filename
-        4.after git commit, to undo git reset --hard HEAD(uncommitted changes will be lost) or git reset --soft HEAD(keep changes in staging area) or git reset --mixed HEAD(keep changes in working directory)
-    
+    <main class="content">
+        <section>
+            <h1>Git Undo Commands</h1>
+            <ol>
+                <li>Use <code>git restore .</code> or <code>git restore &lt;filename&gt;</code> to undo local changes.</li>
+                <li>After <code>git add &lt;filename&gt;</code>, undo staging with <code>git restore --staged &lt;filename&gt;</code> then restore the file.</li>
+                <li>After staging and changing a file without committing, use <code>git restore --worktree &lt;filename&gt;</code>.</li>
+                <li>After commit, undo with:
+                    <ul>
+                        <li><code>git reset --hard HEAD</code> (loses uncommitted changes)</li>
+                        <li><code>git reset --soft HEAD</code> (keeps changes staged)</li>
+                        <li><code>git reset --mixed HEAD</code> (keeps changes in working tree)</li>
+                    </ul>
+                </li>
+            </ol>
+        </section>
 
-        logging types
-        1.git log -p -no for last number of commits
-        2.git log --pretty==oneline for one line per commit
-        3.git log --stat for summary of changes in each commit
-        4.git log --pretty=format:"%h - %an, %ar : %s" for custom format of log output
-        5.git log --grep="keyword" for search commits with specific keyword in commit message
-        6.git log --author="author name" for search commits by specific author
-        7.git log --since="date" for search commits after specific date
-        8.git log --until="date" for search commits before specific date
-        9.git log --no-merges for exclude merge commits from log output
-    
-        for push into github
-        1.git push -u origin branchname for first time push
-        2.git push origin branchname for subsequent pushes
-        3.push remote branch to local git fetch origin branchname:branchname
-        4.git remote -v for check remote repository
-    </h1>
-    
+        <section>
+            <h2>Git Log Options</h2>
+            <ol>
+                <li><code>git log -p -n &lt;number&gt;</code> shows patch diffs for the last commits.</li>
+                <li><code>git log --pretty=oneline</code> shows each commit on one line.</li>
+                <li><code>git log --stat</code> shows a summary of changes per commit.</li>
+                <li><code>git log --pretty=format:"%h - %an, %ar : %s"</code> shows a custom commit format.</li>
+                <li><code>git log --grep="keyword"</code> searches commits by message keyword.</li>
+                <li><code>git log --author="author name"</code> filters commits by author.</li>
+                <li><code>git log --since="date"</code> shows commits after a date.</li>
+                <li><code>git log --until="date"</code> shows commits before a date.</li>
+                <li><code>git log --no-merges</code> excludes merge commits.</li>
+            </ol>
+        </section>
+
+        <section>
+            <h2>Push to GitHub</h2>
+            <ol>
+                <li><code>git push -u origin branchname</code> for the first push.</li>
+                <li><code>git push origin branchname</code> for later pushes.</li>
+                <li>Fetch a remote branch locally with <code>git fetch origin branchname:branchname</code>.</li>
+                <li>Check remotes with <code>git remote -v</code>.</li>
+            </ol>
+        </section>
+
+        <section>
+            <h2>Pull from GitHub</h2>
+            <ol>
+                <li><code>git pull origin branchname</code> pulls remote changes into local repository.</li>
+            </ol>
+        </section>
+
+        <section>
+            <h2>Clone a Repository</h2>
+            <ol>
+                <li><code>git clone repositoryurl</code> clones a remote repository locally.</li>
+            </ol>
+        </section>
+
+        <section>
+            <h2>Branching and Switching</h2>
+            <ol>
+                <li><code>git branch branchname</code> creates a new branch.</li>
+                <li><code>git checkout branchname</code> switches to that branch.</li>
+            </ol>
+        </section>
+    </main>
 </body>
 </html>
