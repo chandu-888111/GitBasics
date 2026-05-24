@@ -79,7 +79,7 @@
                 <ul>
                     <li>When another user forks your repository, you can collaborate by creating pull requests.And there are several options like comment,sync changes,etc.</li>
                 </ul>
-                
+
                 <li><code>git remote add upstream repositoryurl</code> adds the original repository as a remote.</li>
                 <li><code>git fetch upstream</code> fetches changes from the original repository.</li>
                 <li><code>git checkout -b branchname upstream/branchname</code> creates a new branch based on the upstream branch.</li>
@@ -87,6 +87,12 @@
                 <li>Create a pull request on GitHub to propose changes to the original repository.</li>
             </ol>
         </section>
+        
+        <h2>Gitignore and Clean</h2>
+        <ol>
+            <li><code>.gitignore</code> file specifies intentionally untracked files to ignore.</li>
+            <li><code>git clean -n</code> shows which untracked files would be removed.</li>
+            <li><code>git clean -f</code> removes untracked files from the working directory.</li>
     </main>
 </body>
 </html>
