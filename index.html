@@ -87,12 +87,28 @@
                 <li>Create a pull request on GitHub to propose changes to the original repository.</li>
             </ol>
         </section>
-        
-        <h2>Gitignore and Clean</h2>
+
+        <h2>Gitignore,Clean and Tags</h2>
         <ol>
             <li><code>.gitignore</code> file specifies intentionally untracked files to ignore.</li>
             <li><code>git clean -n</code> shows which untracked files would be removed.</li>
             <li><code>git clean -f</code> removes untracked files from the working directory.</li>
+            <li><code>git tag</code> creates a tag for a specific commit.</li>
+            <li><code>git tag -a tagname -m "message"</code> creates an annotated tag with a message.</li>
+            <li><code>git tag -d tagname</code> deletes a tag.</li>
+            <li><code>git show tagname</code> displays the details of a tag.</li>
+            <li><code>git tag -a tagname -m "commitno"</code> creates an annotated tag with a specific commit.</li>
+            <li><code>git push origin tagname</code> pushes a tag to the remote repository.</li>
+            <li><code>git checkout tagname</code> switches to a specific tag.</li>
+        </ol>
+
+        <h2>Github Hosting</h2>
+        <ol>
+            <li>GitHub is a web-based platform for hosting and collaborating on Git repositories.</li>
+            <li>It provides features like pull requests, issue tracking, and project management tools.</li>
+            <li>GitHub allows developers to share their code and collaborate with others on open-source projects.</li>
+            <li>Go to settings,pages and in branch select the desired branch and root it will take a short time to deploy and gives a live URL.</li>
+        </ol>
     </main>
 </body>
 </html>
