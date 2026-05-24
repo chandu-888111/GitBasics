@@ -69,6 +69,22 @@
             <ol>
                 <li><code>git branch branchname</code> creates a new branch.</li>
                 <li><code>git checkout branchname</code> switches to that branch.</li>
+                <li>Merge conflicts can be resolved by editing the conflicting files and then adding them with <code>git add</code>.</li>
+            </ol>
+        </section>
+
+        <section>
+            <h2>Forking and Pull Requests</h2>
+            <ol>
+                <ul>
+                    <li>When another user forks your repository, you can collaborate by creating pull requests.And there are several options like comment,sync changes,etc.</li>
+                </ul>
+                
+                <li><code>git remote add upstream repositoryurl</code> adds the original repository as a remote.</li>
+                <li><code>git fetch upstream</code> fetches changes from the original repository.</li>
+                <li><code>git checkout -b branchname upstream/branchname</code> creates a new branch based on the upstream branch.</li>
+                <li><code>git push origin branchname</code> pushes the local branch to the forked repository.</li>
+                <li>Create a pull request on GitHub to propose changes to the original repository.</li>
             </ol>
         </section>
     </main>
